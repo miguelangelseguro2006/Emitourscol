@@ -1,6 +1,7 @@
-[
-  {
-    "id": "san-andres",
+{
+  "items": [
+    {
+      "id": "san-andres",
     "activo": true,
     "destino": "San Andrés",
     "emoji": "🌴",
@@ -13,95 +14,6 @@
     "vigencia": "Hasta el 30 de julio",
     "gradiente": "linear-gradient(160deg,#0a2a4a,#117a65)",
     "whatsappMensaje": "Hola Emitours 👋, vi la oferta de *San Andrés* en su web y quiero cotizar. ¿Cuándo hay disponibilidad? ✈️"
-  },
-  {
-    "id": "cartagena",
-    "activo": true,
-    "destino": "Cartagena",
-    "emoji": "🏰",
-    "badge": "⭐ MÁS VENDIDO",
-    "copy": "Ciudad amurallada, historia viva y playas tropicales. El destino perfecto para enamorarse de Colombia.",
-    "precioDesde": 750000,
-    "moneda": "COP",
-    "descripcionPrecio": "por persona",
-    "incluye": "Vuelo + hotel + city tour",
-    "vigencia": "Todo el año",
-    "gradiente": "linear-gradient(160deg,#7b241c,#e67e22)",
-    "whatsappMensaje": "Hola Emitours 👋, vi la oferta de *Cartagena* en su web y quiero cotizar. ¿Cuándo hay disponibilidad? ✈️"
-  },
-  {
-    "id": "santa-marta",
-    "activo": true,
-    "destino": "Santa Marta",
-    "emoji": "🌊",
-    "badge": null,
-    "copy": "Tayrona, la Sierra Nevada y las mejores playas del Caribe colombiano en un solo destino.",
-    "precioDesde": 680000,
-    "moneda": "COP",
-    "descripcionPrecio": "por persona",
-    "incluye": "Vuelo + 2 noches",
-    "vigencia": null,
-    "gradiente": "linear-gradient(160deg,#154360,#0e6655)",
-    "whatsappMensaje": "Hola Emitours 👋, vi la oferta de *Santa Marta* en su web y quiero cotizar. ¿Cuándo hay disponibilidad? ✈️"
-  },
-  {
-    "id": "punta-cana",
-    "activo": true,
-    "destino": "Punta Cana",
-    "emoji": "🌺",
-    "badge": "✈️ TODO INCLUIDO",
-    "copy": "Resorts todo incluido, playas vírgenes y la energía del Caribe en su máximo esplendor.",
-    "precioDesde": 7200000,
-    "moneda": "COP",
-    "descripcionPrecio": "por persona",
-    "incluye": "Vuelo + resort 5★ all inclusive",
-    "vigencia": "Salidas agosto–diciembre",
-    "gradiente": "linear-gradient(160deg,#4a235a,#1a5276)",
-    "whatsappMensaje": "Hola Emitours 👋, vi la oferta de *Punta Cana* en su web y quiero cotizar. ¿Cuándo hay disponibilidad? ✈️"
-  },
-  {
-    "id": "cancun",
-    "activo": true,
-    "destino": "Cancún",
-    "emoji": "🌮",
-    "badge": "💥 PRECIO ESPECIAL",
-    "copy": "Playas turquesas, ruinas mayas y vida nocturna de clase mundial.",
-    "precioDesde": 6400000,
-    "moneda": "COP",
-    "descripcionPrecio": "por persona",
-    "incluye": "Vuelo + hotel + traslados",
-    "vigencia": "Disponible todo el año",
-    "gradiente": "linear-gradient(160deg,#0d3349,#148f77)",
-    "whatsappMensaje": "Hola Emitours 👋, vi la oferta de *Cancún* en su web y quiero cotizar. ¿Cuándo hay disponibilidad? ✈️"
-  },
-  {
-    "id": "espana",
-    "activo": true,
-    "destino": "España",
-    "emoji": "🇪🇸",
-    "badge": null,
-    "copy": "Barcelona, Madrid, Sevilla y más. Europa al alcance con asesoría migratoria incluida.",
-    "precioDesde": 12500000,
-    "moneda": "COP",
-    "descripcionPrecio": "por persona",
-    "incluye": "Vuelo + 7 noches + asistencia migratoria",
-    "vigencia": null,
-    "gradiente": "linear-gradient(160deg,#7b241c,#c0392b)",
-    "whatsappMensaje": "Hola Emitours 👋, vi la oferta de *España* en su web y quiero cotizar. ¿Cuándo hay disponibilidad? ✈️"
-  },
-  {
-    "id": "hacienda-napoles",
-    "activo": true,
-    "destino": "Hacienda Nápoles",
-    "emoji": "🦁",
-    "badge": "🦁 PLAN FAMILIAR",
-    "copy": "Aventura familiar en Antioquia. Parque temático, safaris y naturaleza selvática para todos.",
-    "precioDesde": 420000,
-    "moneda": "COP",
-    "descripcionPrecio": "por persona",
-    "incluye": "Transporte + entrada + 1 noche",
-    "vigencia": "Fines de semana",
-    "gradiente": "linear-gradient(160deg,#145a32,#1d8348)",
-    "whatsappMensaje": "Hola Emitours 👋, vi la oferta de *Hacienda Nápoles* en su web y quiero cotizar. ¿Cuándo hay disponibilidad? ✈️"
-  }
-]
+    }
+  ]
+}
