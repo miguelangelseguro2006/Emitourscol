@@ -2,11 +2,9 @@ backend:
   name: git-gateway
   branch: main
 
+# ── Dónde se guardan las imágenes subidas desde el CMS ──────
 media_folder: "assets/img"
 public_folder: "/assets/img"
-
-# Decap CMS necesita este locale para español
-locale: "es"
 
 collections:
 
@@ -30,17 +28,17 @@ collections:
           - label: "Texto del banner"
             name: "texto"
             widget: "string"
-            hint: "Ej: 🎉 Paquetes a San Andrés desde $890.000 COP"
+            hint: "Ej: 🎉 ¡Oferta! Paquetes a San Andrés desde $890.000 COP"
 
-          - label: "Texto del botón"
+          - label: "Texto del botón / enlace"
             name: "linkTexto"
             widget: "string"
             hint: "Ej: ¡Quiero este plan!"
 
-          - label: "Mensaje de WhatsApp"
+          - label: "Mensaje de WhatsApp al hacer clic"
             name: "whatsappMensaje"
             widget: "text"
-            hint: "Texto que se enviará por WhatsApp al hacer clic"
+            hint: "Este texto se enviará automáticamente por WhatsApp"
 
   # ══════════════════════════════════════════════════════════
   # ✈️ PROMOCIONES Y DESTINOS
@@ -57,52 +55,55 @@ collections:
             label: "Destinos"
             widget: "list"
             label_singular: "Destino"
-            summary: "{{fields.destino}} — ${{fields.precioDesde}} COP"
+            summary: "{{fields.destino}} — {{fields.precioDesde}} COP"
             fields:
+
               - label: "ID único"
                 name: "id"
                 widget: "string"
-                hint: "Solo minúsculas y guiones. Ej: san-andres. No cambiar después."
+                hint: "Solo letras minúsculas y guiones. Ej: san-andres. No cambiar después de creado."
 
               - label: "Visible en la web"
                 name: "activo"
                 widget: "boolean"
                 default: true
+                hint: "Desactivar para ocultar sin borrar"
 
               - label: "Nombre del destino"
                 name: "destino"
                 widget: "string"
+                hint: "Ej: San Andrés"
 
-              - label: "Emoji"
+              - label: "Emoji del destino"
                 name: "emoji"
                 widget: "string"
-                hint: "Ej: 🌴"
+                hint: "Ej: 🌴 — aparece en las cards y en WhatsApp"
 
               - label: "Imagen del destino"
                 name: "imagen"
                 widget: "image"
-                required: false
-                allow_multiple: false
-                hint: "Sube la imagen aquí. Recomendado: 1200x800px JPG, máx 300KB"
+                hint: "Sube la imagen desde aquí. Se usará en el hero, cards y ofertas. Tamaño recomendado: 1200×800px JPG."
                 media_folder: "/assets/img"
                 public_folder: "/assets/img"
+                required: false
 
-              - label: "Badge (etiqueta especial)"
+              - label: "Badge / etiqueta especial"
                 name: "badge"
                 widget: "string"
                 required: false
-                hint: "Ej: 🔥 SÚPER OFERTA — vacío para ocultar"
+                hint: "Ej: 🔥 SÚPER OFERTA — dejar vacío para no mostrar"
 
               - label: "Descripción corta"
                 name: "copy"
                 widget: "text"
+                hint: "Texto que aparece debajo del nombre del destino"
 
-              - label: "Precio desde (solo número)"
+              - label: "Precio desde (en números)"
                 name: "precioDesde"
                 widget: "number"
                 value_type: "int"
                 min: 0
-                hint: "Ej: 890000 (sin puntos ni símbolos)"
+                hint: "Solo el número, sin puntos ni símbolos. Ej: 890000"
 
               - label: "Moneda"
                 name: "moneda"
@@ -114,28 +115,29 @@ collections:
                 name: "descripcionPrecio"
                 widget: "string"
                 default: "por persona"
+                hint: "Ej: por persona, por pareja, por noche"
 
-              - label: "¿Qué incluye?"
+              - label: "¿Qué incluye el paquete?"
                 name: "incluye"
                 widget: "string"
                 hint: "Ej: Vuelo + 3 noches + traslados"
 
-              - label: "Vigencia"
+              - label: "Vigencia de la oferta"
                 name: "vigencia"
                 widget: "string"
                 required: false
-                hint: "Ej: Hasta el 30 de julio — vacío si no aplica"
+                hint: "Ej: Hasta el 30 de julio — dejar vacío si no aplica"
 
-              - label: "Aparece en el Hero (slider)"
+              - label: "Aparece en el Hero (slider principal)"
                 name: "heroSlide"
                 widget: "boolean"
                 default: false
-                hint: "Activa para mostrar este destino en el slider principal"
+                hint: "Activa para que este destino aparezca en el slider del hero con su imagen"
 
               - label: "Mensaje de WhatsApp"
                 name: "whatsappMensaje"
                 widget: "text"
-                hint: "Mensaje al hacer clic en el botón del destino"
+                hint: "Mensaje que se enviará al cliente cuando haga clic en 'Quiero este plan'"
 
   # ══════════════════════════════════════════════════════════
   # 💬 TESTIMONIOS
@@ -152,12 +154,13 @@ collections:
             label: "Testimonios"
             widget: "list"
             label_singular: "Testimonio"
-            summary: "{{fields.nombre}} — {{fields.destino}}"
+            summary: "{{fields.nombre}} — {{fields.destino}} ({{fields.estrellas}}★)"
             fields:
+
               - label: "ID único"
                 name: "id"
                 widget: "string"
-                hint: "Ej: valentina-rios"
+                hint: "Solo letras minúsculas y guiones. Ej: maria-garcia"
 
               - label: "Visible en la web"
                 name: "activo"
@@ -167,6 +170,7 @@ collections:
               - label: "Nombre completo"
                 name: "nombre"
                 widget: "string"
+                hint: "Ej: Valentina Ríos"
 
               - label: "Ciudad"
                 name: "ciudad"
@@ -176,26 +180,24 @@ collections:
               - label: "Destino visitado"
                 name: "destino"
                 widget: "string"
+                hint: "Ej: San Andrés"
 
               - label: "Emoji avatar"
                 name: "emoji"
                 widget: "select"
-                options:
-                  - { label: "Mujer 👩", value: "👩" }
-                  - { label: "Hombre 👨", value: "👨" }
-                  - { label: "Pareja 👫", value: "👫" }
-                  - { label: "Familia 👨‍👩‍👧‍👦", value: "👨‍👩‍👧‍👦" }
-                  - { label: "Joven 🧑", value: "🧑" }
+                options: ["👩", "👨", "👩‍💼", "👨‍💼", "👴", "👵", "🧑", "👫", "👨‍👩‍👧‍👦"]
                 default: "👩"
+                hint: "Ícono que representa al viajero"
 
-              - label: "Estrellas (1 a 5)"
+              - label: "Calificación (estrellas)"
                 name: "estrellas"
                 widget: "number"
                 min: 1
                 max: 5
                 default: 5
+                hint: "Del 1 al 5"
 
               - label: "Testimonio"
                 name: "texto"
                 widget: "text"
-                hint: "La experiencia del viajero"
+                hint: "La experiencia del viajero en sus propias palabras"
