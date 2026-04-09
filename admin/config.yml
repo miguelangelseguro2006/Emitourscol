@@ -5,9 +5,10 @@ backend:
 media_folder: "assets/img"
 public_folder: "/assets/img"
 
+# ─── COLECCIONES EDITABLES ────────────────────────────────
 collections:
 
-  # ── BANNER ──
+  # ── BANNER SUPERIOR ────────────────────────────────────
   - name: "banner"
     label: "🔔 Banner Superior"
     files:
@@ -17,43 +18,66 @@ collections:
         format: json
         fields:
           - { label: "Mostrar banner", name: "activo", widget: "boolean", default: true }
-          - { label: "Texto del banner", name: "texto", widget: "string" }
-          - { label: "Texto del botón", name: "linkTexto", widget: "string" }
-          - { label: "Mensaje WhatsApp", name: "whatsappMensaje", widget: "text" }
+          - { label: "Texto del banner", name: "texto", widget: "string",
+              hint: "Ej: 🎉 ¡Oferta de temporada! Paquetes a San Andrés desde $890.000 COP" }
+          - { label: "Texto del botón / enlace", name: "linkTexto", widget: "string",
+              hint: "Ej: ¡Quiero este plan!" }
+          - { label: "Mensaje de WhatsApp", name: "whatsappMensaje", widget: "text",
+              hint: "Mensaje que se enviará al hacer clic en el enlace del banner" }
 
-  # ── PROMOCIONES ──
-  {
-  "items": [
-    {
-      "id": "san-andres",
-      "activo": true,
-      "destino": "San Andrés",
-      "emoji": "🌴",
-      "badge": "🔥 SÚPER OFERTA",
-      "copy": "El mar más azul de Colombia te espera.",
-      "precioDesde": 890000,
-      "moneda": "COP",
-      "descripcionPrecio": "por persona",
-      "incluye": "Vuelo + 3 noches + traslados",
-      "vigencia": "Hasta el 30 de julio",
-      "gradiente": "linear-gradient(135deg,#1e6fd9,#0a9396)",
-      "whatsappMensaje": "Hola, quiero info de San Andrés"
-    }
-  ]
-}
+  # ── PROMOCIONES / DESTINOS ─────────────────────────────
+  - name: "promociones"
+    label: "✈️ Promociones y Destinos"
+    file: "data/promociones.json"
+    format: json
+    label_singular: "Promoción"
+    fields:
+      - name: "items"
+        label: "Lista de promociones"
+        widget: "list"
+        summary: "{{fields.destino}}"
+        fields:
+          - { label: "ID único", name: "id", widget: "string",
+              hint: "Solo letras minúsculas y guiones. Ej: san-andres" }
+          - { label: "Activo (visible en la web)", name: "activo", widget: "boolean", default: true }
+          - { label: "Destino", name: "destino", widget: "string", hint: "Ej: San Andrés" }
+          - { label: "Emoji del destino", name: "emoji", widget: "string", hint: "Ej: 🌴" }
+          - { label: "Badge / etiqueta", name: "badge", widget: "string", required: false,
+              hint: "Ej: 🔥 SÚPER OFERTA — dejar vacío para ocultar" }
+          - { label: "Descripción corta", name: "copy", widget: "text" }
+          - { label: "Precio desde (número)", name: "precioDesde", widget: "number",
+              hint: "En COP. Ej: 890000" }
+          - { label: "Moneda", name: "moneda", widget: "select",
+              options: ["COP", "USD"], default: "COP" }
+          - { label: "Descripción del precio", name: "descripcionPrecio", widget: "string",
+              default: "por persona" }
+          - { label: "¿Qué incluye?", name: "incluye", widget: "string",
+              hint: "Ej: Vuelo + 3 noches + traslados" }
+          - { label: "Vigencia", name: "vigencia", widget: "string", required: false,
+              hint: "Ej: Hasta el 30 de julio — dejar vacío si no aplica" }
+          - { label: "Gradiente de color (CSS)", name: "gradiente", widget: "string",
+              hint: "Ej: linear-gradient(160deg,#0a2a4a,#117a65)" }
+          - { label: "Mensaje de WhatsApp", name: "whatsappMensaje", widget: "text" }
 
-  # ── TESTIMONIOS ──
-  {
-  "items": [
-    {
-      "id": "testimonio1",
-      "activo": true,
-      "nombre": "Valentina Ríos",
-      "ciudad": "Cali, Valle del Cauca",
-      "destino": "San Andrés",
-      "emoji": "👩",
-      "estrellas": 5,
-      "texto": "El viaje fue increíble, todo perfecto."
-    }
-  ]
-}
+  # ── TESTIMONIOS ───────────────────────────────────────
+  - name: "testimonios"
+    label: "💬 Testimonios"
+    file: "data/testimonios.json"
+    format: json
+    label_singular: "Testimonio"
+    fields:
+      - name: "items"
+        label: "Lista de testimonios"
+        widget: "list"
+        summary: "{{fields.nombre}} — {{fields.destino}}"
+        fields:
+          - { label: "ID único", name: "id", widget: "string" }
+          - { label: "Activo", name: "activo", widget: "boolean", default: true }
+          - { label: "Nombre completo", name: "nombre", widget: "string" }
+          - { label: "Ciudad", name: "ciudad", widget: "string", hint: "Ej: Cali, Valle del Cauca" }
+          - { label: "Destino visitado", name: "destino", widget: "string" }
+          - { label: "Emoji avatar", name: "emoji", widget: "string",
+              hint: "Ej: 👩 o 👨" }
+          - { label: "Estrellas (1–5)", name: "estrellas", widget: "number",
+              min: 1, max: 5, default: 5 }
+          - { label: "Testimonio", name: "texto", widget: "text" }
