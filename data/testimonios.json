@@ -1,62 +1,64 @@
-[
-  {
-    "id": "valentina-rios",
-    "activo": true,
-    "nombre": "Valentina Ríos",
-    "ciudad": "Cali, Valle del Cauca",
-    "destino": "San Andrés",
-    "emoji": "👩",
-    "estrellas": 5,
-    "texto": "Nunca había viajado en avión y tenía mucho miedo al proceso. El equipo de Emitours me explicó todo paso a paso y siempre estuvo disponible. ¡El viaje fue increíble, definitivamente vuelvo con ellos!"
-  },
-  {
-    "id": "andres-gomez",
-    "activo": true,
-    "nombre": "Andrés Felipe Gómez",
-    "ciudad": "Bogotá, Cundinamarca",
-    "destino": "Punta Cana",
-    "emoji": "👨",
-    "estrellas": 5,
-    "texto": "Mi esposa y yo queríamos un viaje de aniversario perfecto con presupuesto limitado. Emitours armó un paquete todo incluido que parecía de lujo y no nos costó una fortuna. ¡Gracias totales!"
-  },
-  {
-    "id": "marcela-uribe",
-    "activo": true,
-    "nombre": "Marcela Uribe",
-    "ciudad": "Medellín, Antioquia",
-    "destino": "España",
-    "emoji": "👩",
-    "estrellas": 5,
-    "texto": "Necesitaba viajar a España con trámites de visa incluidos. Emitours me asesoró en todo el proceso migratorio y el viaje salió perfecto. 100% recomendados si quieres salir del país."
-  },
-  {
-    "id": "carlos-munoz",
-    "activo": true,
-    "nombre": "Carlos Muñoz",
-    "ciudad": "Cali, Valle del Cauca",
-    "destino": "Cartagena",
-    "emoji": "👨",
-    "estrellas": 5,
-    "texto": "Viajé con toda mi familia — éramos 6 — y Emitours coordinó todo: vuelos, hotel frente al mar, traslados y excursión a las Islas del Rosario. Lo mejor fue la atención en WhatsApp, siempre pendientes."
-  },
-  {
-    "id": "daniela-castro",
-    "activo": true,
-    "nombre": "Daniela Castro",
-    "ciudad": "Bogotá, Cundinamarca",
-    "destino": "Cancún",
-    "emoji": "👩",
-    "estrellas": 5,
-    "texto": "Busqué en varias agencias y Emitours tenía el mejor precio para Cancún. Súper atentos, rápidos y organizados. Ya estoy planeando el próximo viaje con ellos."
-  },
-  {
-    "id": "sofia-herrera",
-    "activo": true,
-    "nombre": "Sofía Herrera",
-    "ciudad": "Cali, Valle del Cauca",
-    "destino": "Santa Marta",
-    "emoji": "👩",
-    "estrellas": 5,
-    "texto": "Viaje de cumpleaños a Santa Marta y todo perfecto. El hotel era una belleza y el tour a Tayrona fue lo mejor que he vivido. Definitivamente vuelvo a reservar con Emitours."
-  }
-]
+{
+  "items": [
+    {
+      "id": "valentina-rios",
+      "activo": true,
+      "nombre": "Valentina Ríos",
+      "ciudad": "Cali, Valle del Cauca",
+      "destino": "San Andrés",
+      "emoji": "👩",
+      "estrellas": 5,
+      "texto": "Nunca había viajado en avión y tenía mucho miedo al proceso. El equipo de Emitours me explicó todo paso a paso y siempre estuvo disponible. ¡El viaje fue increíble, definitivamente vuelvo con ellos!"
+    },
+    {
+      "id": "andres-gomez",
+      "activo": true,
+      "nombre": "Andrés Felipe Gómez",
+      "ciudad": "Bogotá, Cundinamarca",
+      "destino": "Punta Cana",
+      "emoji": "👨",
+      "estrellas": 5,
+      "texto": "Mi esposa y yo queríamos un viaje de aniversario perfecto con presupuesto limitado. Emitours armó un paquete todo incluido que parecía de lujo y no nos costó una fortuna. ¡Gracias totales!"
+    },
+    {
+      "id": "marcela-uribe",
+      "activo": true,
+      "nombre": "Marcela Uribe",
+      "ciudad": "Medellín, Antioquia",
+      "destino": "España",
+      "emoji": "👩",
+      "estrellas": 5,
+      "texto": "Necesitaba viajar a España con trámites de visa incluidos. Emitours me asesoró en todo el proceso migratorio y el viaje salió perfecto. 100% recomendados si quieres salir del país."
+    },
+    {
+      "id": "carlos-munoz",
+      "activo": true,
+      "nombre": "Carlos Muñoz",
+      "ciudad": "Cali, Valle del Cauca",
+      "destino": "Cartagena",
+      "emoji": "👨",
+      "estrellas": 5,
+      "texto": "Viajé con toda mi familia — éramos 6 — y Emitours coordinó todo: vuelos, hotel frente al mar, traslados y excursión a las Islas del Rosario. Lo mejor fue la atención en WhatsApp, siempre pendientes."
+    },
+    {
+      "id": "daniela-castro",
+      "activo": true,
+      "nombre": "Daniela Castro",
+      "ciudad": "Bogotá, Cundinamarca",
+      "destino": "Cancún",
+      "emoji": "👩",
+      "estrellas": 5,
+      "texto": "Busqué en varias agencias y Emitours tenía el mejor precio para Cancún. Súper atentos, rápidos y organizados. Ya estoy planeando el próximo viaje con ellos."
+    },
+    {
+      "id": "sofia-herrera",
+      "activo": true,
+      "nombre": "Sofía Herrera",
+      "ciudad": "Cali, Valle del Cauca",
+      "destino": "Santa Marta",
+      "emoji": "👩",
+      "estrellas": 5,
+      "texto": "Viaje de cumpleaños a Santa Marta y todo perfecto. El hotel era una belleza y el tour a Tayrona fue lo mejor que he vivido. Definitivamente vuelvo a reservar con Emitours."
+    }
+  ]
+}
