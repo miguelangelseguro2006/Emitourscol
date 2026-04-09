@@ -28,7 +28,7 @@
       "descripcionPrecio": "por persona",
       "copy": "Ciudad amurallada, historia viva y playas tropicales. El destino perfecto para enamorarse de Colombia.",
       "moneda": "COP",
-      "heroSlide": true,
+      "heroSlide": false,
       "id": "cartagena",
       "vigencia": "Todo el año"
     },
