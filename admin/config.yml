@@ -22,52 +22,38 @@ collections:
           - { label: "Mensaje WhatsApp", name: "whatsappMensaje", widget: "text" }
 
   # ── PROMOCIONES ──
-  - name: "promociones"
-    label: "✈️ Promociones y Destinos"
-    files:
-      - name: "promociones"
-        label: "Promociones"
-        file: "data/promociones.json"
-        format: json
-        fields:
-          - name: "items"
-            label: "Lista de promociones"
-            widget: "list"
-            summary: "{{fields.destino}}"
-            fields:
-              - { label: "ID único", name: "id", widget: "string" }
-              - { label: "Activo", name: "activo", widget: "boolean", default: true }
-              - { label: "Destino", name: "destino", widget: "string" }
-              - { label: "Emoji", name: "emoji", widget: "string" }
-              - { label: "Badge", name: "badge", widget: "string", required: false }
-              - { label: "Descripción", name: "copy", widget: "text" }
-              - { label: "Precio desde", name: "precioDesde", widget: "number" }
-              - { label: "Moneda", name: "moneda", widget: "select", options: ["COP","USD"] }
-              - { label: "Descripción precio", name: "descripcionPrecio", widget: "string" }
-              - { label: "Incluye", name: "incluye", widget: "string" }
-              - { label: "Vigencia", name: "vigencia", widget: "string", required: false }
-              - { label: "Gradiente", name: "gradiente", widget: "string" }
-              - { label: "WhatsApp", name: "whatsappMensaje", widget: "text" }
+  {
+  "items": [
+    {
+      "id": "san-andres",
+      "activo": true,
+      "destino": "San Andrés",
+      "emoji": "🌴",
+      "badge": "🔥 SÚPER OFERTA",
+      "copy": "El mar más azul de Colombia te espera.",
+      "precioDesde": 890000,
+      "moneda": "COP",
+      "descripcionPrecio": "por persona",
+      "incluye": "Vuelo + 3 noches + traslados",
+      "vigencia": "Hasta el 30 de julio",
+      "gradiente": "linear-gradient(135deg,#1e6fd9,#0a9396)",
+      "whatsappMensaje": "Hola, quiero info de San Andrés"
+    }
+  ]
+}
 
   # ── TESTIMONIOS ──
-  - name: "testimonios"
-    label: "💬 Testimonios"
-    files:
-      - name: "testimonios"
-        label: "Testimonios"
-        file: "data/testimonios.json"
-        format: json
-        fields:
-          - name: "items"
-            label: "Lista de testimonios"
-            widget: "list"
-            summary: "{{fields.nombre}} — {{fields.destino}}"
-            fields:
-              - { label: "ID", name: "id", widget: "string" }
-              - { label: "Activo", name: "activo", widget: "boolean", default: true }
-              - { label: "Nombre", name: "nombre", widget: "string" }
-              - { label: "Ciudad", name: "ciudad", widget: "string" }
-              - { label: "Destino", name: "destino", widget: "string" }
-              - { label: "Emoji", name: "emoji", widget: "string" }
-              - { label: "Estrellas", name: "estrellas", widget: "number", min: 1, max: 5 }
-              - { label: "Texto", name: "texto", widget: "text" }
+  {
+  "items": [
+    {
+      "id": "testimonio1",
+      "activo": true,
+      "nombre": "Valentina Ríos",
+      "ciudad": "Cali, Valle del Cauca",
+      "destino": "San Andrés",
+      "emoji": "👩",
+      "estrellas": 5,
+      "texto": "El viaje fue increíble, todo perfecto."
+    }
+  ]
+}
